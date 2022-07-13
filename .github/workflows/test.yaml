@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go_version: ["~1.18", ">=1.19.0-rc.2"]
+        go_version: ["~1.18"]
     steps:
       - uses: actions/checkout@v3
 
@@ -46,7 +46,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go_version: ["~1.17", "~1.18", ">=1.19.0-rc.2"]
+        go_version: ["~1.17", "~1.18"]
 
     steps:
       - uses: actions/checkout@v3
