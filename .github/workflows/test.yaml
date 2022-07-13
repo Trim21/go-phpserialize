@@ -37,6 +37,7 @@ jobs:
         with:
           go-version: "${{ matrix.go_version }}"
           stable: false
+          check-latest: true
           cache: true
 
       - run: go test -count=1 -v ./...
@@ -56,6 +57,7 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: "${{ matrix.go_version }}"
+          check-latest: true
           cache: true
 
       - run: go test -coverpkg=./... -covermode=atomic -coverprofile=coverage.out -count=1 ./...
