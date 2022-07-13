@@ -23,12 +23,12 @@ on:
       - "**.go.json"
 
 jobs:
-  "go-118":
+  "go118":
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        go_version: ["~1.18", "1.19rc2"]
+        go_version: ["~1.18", "1.19rc1"]
     steps:
       - uses: actions/checkout@v3
 
@@ -46,7 +46,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go_version: ["~1.17", "~1.18", "1.19rc2"]
+        go_version: ["~1.17", "~1.18", "1.19rc1"]
 
     steps:
       - uses: actions/checkout@v3
